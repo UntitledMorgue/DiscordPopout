@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pop</title>
+	<style type="text/css">
+	     @font-face {
+    font-family: 'Whitney-Semibold Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Whitney-Semibold Regular'), url('whitneysemibold.woff') format('woff');
+    }
+	body {
+		font-family: 'Whitney-Semibold Regular';
+	}
+		.card {
+			border-radius: 4px;
+			padding: 1em;
+			background: rgb(194,145,52);
+			background: linear-gradient(180deg, #ae8d4b 60px, #18191c 60px);
+			width: 250px;
+			color: grey;
+			font-family: sans-serif;
+			filter: drop-shadow(0 0 0.72rem black);
+		}
+		.user_pic {
+			position: relative;
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			border: 6px solid #18191c;
+			box-sizing: border-box;
+			float: left;
+			background-image: url('https://cdn.discordapp.com/avatars/812815155288473630/a_746d12aafeae66cd3659c55d0511b0ac.gif?size=128');
+			background-size: cover;
+			background-position: 21%;
+		}
+		.online_indicator {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			border: 6px solid #18191c;
+			box-sizing: border-box;
+			background: #3ba55c;
+		}
+		.badges {
+			padding-top: 60px;
+			text-align: right;
+		}
+		.badges img {
+			float: right;
+			padding-left: 5px;
+		}
+		.user_name {
+			clear: both;
+			padding-top: 10px;
+			color: white;
+			font-weight:bold;
+		}
+		.user_name span {
+			color: #afb1b4;
+		}
+		.hr {
+			margin-left: -1em;
+			margin-right: -1em;
+			margin-top: 15px;
+			border-top: 1px solid #262729;
+			padding: 0 0 15px 0;
+		}
+		.status, .notes {
+			font-size: .75em;
+			overflow: hidden;
+		}
+		.heading {
+			font-weight: bold;
+			padding-bottom: 5px;
+		}
+		.tubes {
+			display: table-row;
+		}
+		.preview {
+			width: 70px;
+			height: 70px;
+			float: left;
+			margin-right: 15px;
+			display: table-cell;
+		}
+		.preview img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			border-radius:60px;
+		}
+		.description {
+			height: 70px;
+			margin-bottom: 15px;
+			display: table-cell;
+			vertical-align: middle;
+			font-weight: normal;
+		}
+		.status input[type="button"] {
+			clear: both;
+			width: 100%;
+			height: 30px;
+			border-radius: 20px;
+			border: 1px solid #b9bbbe;
+			background: #18191c;
+			margin-top: 15px;
+			color: #929292;
+			outline: none;
+			font-weight:700;
+		}
+		.status input[type="button"]:hover {
+			cursor:pointer;
+			background: #303235;
+		}
+		.notes {
+			margin-top: 15px;
+		}
+		.notes input {
+			width: 100%;
+			height: 40px;
+			background: #202225;
+			border: none;
+			border-radius: 20px;
+			color: grey;
+			line-height: 40px;
+			padding-left: 10px;
+			box-sizing: border-box;
+			outline: none !important;
+    		box-shadow: none !important;
+		}
+		.notes input:focus {
+			outline: 0 !important;
+		}
+		.card_footer {
+			margin-top: 15px;
+			width: 100%;
+			text-align: center;
+			font-size: .6em;
+		}
+		.spotifyd {
+			font-weight:900;
+		}
+		.gamep {
+			font-weight:900;
+		}
+		.notea {
+			font-weight:900;
+		}
+		.badged {
+			height:24px;
+			width:24px;
+		}
+	</style>
+</head>
+<body>
+	<div class="card">
+		<div class='user_pic'>
+			<div class="online_indicator">
+			</div>
+		</div>
+		<div class="badges">
+			<img class="badged" src="https://canary.discord.com/assets/fbb6f1e160280f0e9aeb5d7c452eefe1.svg">
+			<img class="badged" src="https://canary.discord.com/assets/386884eecd36164487505ddfbac35a9d.svg">
+			<img class="badged" src="https://canary.discord.com/assets/64ae1208b6aefc0a0c3681e6be36f0ff.svg">
+		</div>
+		<div class="user_name">
+			4n4<span>#6254</span>
+		</div>
+		<div class="hr"></div>
+		<div class="status">
+			<div class="heading gamep">
+				LISTENING TO SPOTIFY
+			</div>
+			<div class="tubes">
+				<div class="preview">
+					<img src="https://sslg.ulximg.com/image/1200x1200crop/cover/1555692648_40960612aec07490fbce0d24cd1380e8.jpg/d6b4878b7c16989c9d2af5abd0896d1f/1555692648_6b5acc73e82da1cc7817527ac6c79722.jpg">
+				</div>
+				<div class="description">
+					<span class="heading spotifyd">Star Shopping</span><br>
+					<span id="artist">by Lil Peep</span><br>
+					<span>on Star Shopping</span>
+				</div>
+			</div>
+			<i class="fab fa-spotify"></i><input type="button" class="buttona" name="Watch" value="Connect Spotify">
+		</div>
+		<div class="notes">
+			<div class="heading notea">
+				NOTE
+			</div>
+			<input type="text" name="notes" placeholder="Click to add a note">
+		</div>
+		<div class="card_footer">
+			Right click user for more actions
+		</div>
+	</div>
+</body>
+</html>
